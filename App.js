@@ -38,13 +38,14 @@ const App: () => Node = () => {
       return;
     }
     var result;
-    // Measurement system Imperial [cm, kg]
+    // BMI = KG/M2
+    // Calculate BMI for Imperial [cm, kg]
     if (isEnabled) {
       result =
         (parseFloat(weight) * 10000) /
         (parseFloat(height) * parseFloat(height));
     } else {
-      // Measurement system Metric[in, lb]
+      // Calculate BMI for Metric[in, lb]
       result =
         (parseFloat(weight) / (parseFloat(height) * parseFloat(height))) * 703;
     }
